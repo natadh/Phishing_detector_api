@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phishing Outlook Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+
+    <!-- Fluent UI / Office UI Fabric Core -->
+    <link rel="stylesheet" href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css"/>
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-Fabric">
+    <header class="ms-welcome__header ms-bgColor-neutralLighter">
+        <img width="90" height="90" src="../../assets/logo-filled.png" alt="Contoso" title="Contoso" />
+        <h1 class="ms-font-su">PHISHING DETECTOR API</h1>
+    </header>
+
+    <!-- Sideload message (shown before add-in is fully loaded) -->
+    <section id="sideload-msg" class="ms-welcome__main">
+        <h2 class="ms-font-xl">
+            Please <a target="_blank" href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing">
+            sideload</a> your add-in to see the app body.
+        </h2>
+    </section>
+
+    <!-- Main App Body (initially hidden) -->
+    <main id="app-body" class="ms-welcome__main" style="display: none;">
+        <h2 class="ms-font-xl">Analyze Emails for Phishing</h2>
+        <p class="ms-font-l">Click the button below to analyze the email content for phishing threats.</p>
+        <button id="analyzeButton" class="ms-Button ms-Button--primary">
+            <span class="ms-Button-label">Analyze Email</span>
+        </button>
+        <h3 class="ms-font-l">Result:</h3>
+        <p id="output" class="ms-font-m ms-fontColor-themePrimary">Waiting for analysis...</p>
+    </main>
+
+    <!-- JavaScript: Office.js, event handling, API call, and UI update -->
+    <script>
+        // Wait for Office to initialize
+        Office.onReady((info) => {
+            if (info.host === Office.HostType.Outlook) {
+                // Hide the sideload message and show the app body
+                document.getElementById("sideload-msg").style.display = "none";
+                document.getElementById("app-body").style.display = "block";
+
+                // Attach the click event to the "Analyze Email" button
+                document.getElementById("analyzeButton").addEventListener("click", analyzeEmail);
+            }
+        });
+
+        // Function to extract the email body using Office.js and then call our API
+        function analyzeEmail() {
+            Office.context.mailbox.item.body.getAsync(Office.CoercionType.Text, function(result) {
+                if (result.status === Office.AsyncResultStatus.Succeeded) {
+                    const emailBody = result.value;
+                    sendToPhishingAPI(emailBody);
+                } else {
+                    showMessage("Error retrieving email content: " + result.error.message);
+                }
+            });
+        }
+
+        // Function to call the FastAPI phishing detection endpoint
+        async function sendToPhishingAPI(emailBody) {
+            const apiUrl = "http://127.0.0.1:8000/predict/"; // Ensure this URL is correct and your API is running
+            try {
+                const response = await fetch(apiUrl, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email_text: emailBody })
+                });
+                const data = await response.json();
+
+                // Format the result; data.prediction is expected as 1 (phishing) or 0 (legitimate)
+                const predictionText = data.prediction === 1 ? "Phishing" : "Legitimate";
+                showMessage(`Prediction: ${predictionText}\nProbability: ${data.probability.toFixed(2)}`);
+            } catch (error) {
+                console.error("Error calling API:", error);
+                showMessage("Failed to connect to the phishing detection API.");
+            }
+        }
+
+        // Function to display a message in the output element
+        function showMessage(message) {
+            document.getElementById("output").innerText = message;
+        }
+    </script>
+</body>
+
+</html>

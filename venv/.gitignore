@@ -1,0 +1,19 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+
+# Ignore virtual environments
+venv/
+__pycache__/
+
+# Ignore model files (if they are large, consider storing them elsewhere)
+models/*.pkl
+
+# Ignore logs and environment files
+*.log
+.env
+
+# Ignore Node modules
+node_modules/
+PhishingOutlookAddIn/node_modules/
+
+# Ignore Python caches
+__pycache__/
