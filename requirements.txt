@@ -3,3 +3,5 @@ textblob
 scikit-learn
 pandas
 flask
+fastapi
+uvicorn
