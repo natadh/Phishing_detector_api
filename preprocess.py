@@ -22,12 +22,12 @@ def clean_text(text):
     - Tokenizing and lemmatizing words
     - Removing stopwords
     """
-    text = text.lower()  # Convert to lowercase
-    text = re.sub(r"http\S+|www\S+", "", text)  # Remove URLs
-    text = re.sub(r"\d+", "", text)  # Remove numbers
-    text = re.sub(r"[^\w\s]", "", text)  # Remove punctuation
+    text = text.lower()  # Converting to lowercase
+    text = re.sub(r"http\S+|www\S+", "", text)  # Removing URLs
+    text = re.sub(r"\d+", "", text)  # Removing numbers
+    text = re.sub(r"[^\w\s]", "", text)  # Removing punctuation
 
-    words = word_tokenize(text)  # Tokenize words
+    words = word_tokenize(text)  # Tokenizing words
     words = [lemmatizer.lemmatize(word) for word in words if word not in stop_words]  # Lemmatize & remove stopwords
     return " ".join(words)
 
