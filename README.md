@@ -1,4 +1,4 @@
-# 🛡️ AI-Driven Phishing Email Detection System (AIDE)
+#  AI-Driven Phishing Email Detection System (AIDE)
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)](https://fastapi.tiangolo.com/)
@@ -24,7 +24,7 @@ Phishing Detection Demo:
 
 ---
 
-## 🎯 What It Does
+## What It Does
 
 AIDE classifies incoming emails as **phishing** or **legitimate** by analyzing email content using advanced Natural Language Processing (NLP) and machine learning techniques. The system provides:
 
@@ -36,15 +36,15 @@ AIDE classifies incoming emails as **phishing** or **legitimate** by analyzing e
 
 ### Key Features
 
-✅ **96% Accuracy** with 0.95 F1-score  
-✅ **Sub-second predictions** (~300ms average response time)  
-✅ **Cross-platform** - Works on Outlook Desktop, Web, and Mobile  
-✅ **Privacy-focused** - Emails are processed and immediately discarded  
-✅ **Customizable threshold** - Adjustable sensitivity for your security needs  
+**96% Accuracy** with 0.95 F1-score  
+**Sub-second predictions** (~300ms average response time)  
+**Cross-platform** - Works on Outlook Desktop, Web, and Mobile  
+**Privacy-focused** - Emails are processed and immediately discarded  
+**Customizable threshold** - Adjustable sensitivity for your security needs  
 
 ---
 
-## 🔍 How It Works
+##  How It Works
 
 ### Architecture Overview
 
@@ -114,7 +114,7 @@ AIDE classifies incoming emails as **phishing** or **legitimate** by analyzing e
 
 ---
 
-## 🧠 Machine Learning Details
+##  Machine Learning Details
 
 ### Model Performance
 
@@ -139,7 +139,7 @@ We evaluated multiple algorithms before selecting Logistic Regression:
 
 | Model | Accuracy | F1-Score | Speed | Model Size |
 |-------|----------|----------|-------|------------|
-| **Logistic Regression ✅** | 96% | 0.95 | Fast | 2 MB |
+| **Logistic Regression ** | 96% | 0.95 | Fast | 2 MB |
 | Random Forest | 97% | 0.96 | Slow | 50 MB |
 | Naive Bayes | 94% | 0.93 | Very Fast | 1 MB |
 | SVM | 95% | 0.94 | Slow | 10 MB |
@@ -165,7 +165,7 @@ Cross-validation score: 96%
 
 ---
 
-## 🛠️ Technical Stack
+##  Technical Stack
 
 ### Backend
 - **Framework:** FastAPI (async Python web framework)
@@ -192,7 +192,7 @@ Cross-validation score: 96%
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -303,7 +303,7 @@ This will:
 
 ---
 
-## 📖 Usage
+##  Usage
 
 ### Using the Outlook Add-in
 
@@ -371,7 +371,7 @@ analyzeEmail("Congratulations! You've won $1,000,000...");
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Phishing_detector_api/
@@ -401,7 +401,7 @@ Phishing_detector_api/
 
 ---
 
-## 🔧 Configuration
+##  Configuration
 
 ### Environment Variables
 
@@ -441,7 +441,7 @@ threshold = 0.5  # 50% confidence required
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 ### Run Unit Tests
 
@@ -481,7 +481,7 @@ curl -X POST http://localhost:8000/predict/ \
 
 ---
 
-## 📊 Performance Metrics
+##  Performance Metrics
 
 ### Response Times
 
@@ -504,7 +504,7 @@ curl -X POST http://localhost:8000/predict/ \
 
 ---
 
-## 🚢 Deployment
+##  Deployment
 
 ### Deploy Backend to Render.com
 
@@ -594,7 +594,7 @@ git subtree push --prefix outlook-addin/dist origin gh-pages
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 ### Planned Features
 
@@ -638,7 +638,7 @@ git subtree push --prefix outlook-addin/dist origin gh-pages
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 ### API Reference
 
@@ -713,7 +713,7 @@ python train_model.py
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -751,7 +751,7 @@ python train_model.py
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -771,13 +771,13 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **Prof. Fredrick Ogore** - Project supervisor and mentor
 - **USIU-A** - Providing resources and support
@@ -793,7 +793,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📧 Contact
+##  Contact
 
 **Natalie Adhiambo Odhiambo**  
 Applied Computer Technology Graduate 
@@ -801,11 +801,11 @@ United States International University - Africa
 
 - GitHub: [@natadh](https://github.com/natadh)
 - Email: alieadhiambo@gmail.com
-- LinkedIn: [Your LinkedIn](www.linkedin.com/in/natalie-adhiambo-290789334)
+- LinkedIn: [My LinkedIn](www.linkedin.com/in/natalie-adhiambo-290789334)
 
 ---
 
-## 📈 Project Stats
+##  Project Stats
 
 ![GitHub stars](https://img.shields.io/github/stars/natadh/Phishing_detector_api?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/natadh/Phishing_detector_api?style=social)
@@ -814,7 +814,7 @@ United States International University - Africa
 
 ---
 
-## 🎓 Academic Context
+##  Academic Context
 
 This project was developed as part of the **APT4900: Final Project** course for the Bachelor of Science degree in Applied Computer Technology at United States International University - Africa (USIU-A), Spring Semester 2025.
 
@@ -833,4 +833,4 @@ This project was developed as part of the **APT4900: Final Project** course for 
 
 ---
 
-### ⭐ If you found this project helpful, please consider giving it a star :)!
+###  If you found this project helpful, please consider giving it a star :)!
