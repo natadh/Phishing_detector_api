@@ -1,9 +1,5 @@
 # 🛡️ AI-Driven Phishing Email Detection System (AIDE)
 
-<img width="714" height="375" alt="image" src="https://github.com/user-attachments/assets/fa011ade-9246-486a-8108-a9d6c6ce19b8" />
-<img width="972" height="572" alt="image" src="https://github.com/user-attachments/assets/d269ff5f-0062-4642-894b-0982b6298e86" />
-
-
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)](https://fastapi.tiangolo.com/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)](https://scikit-learn.org/)
@@ -12,10 +8,16 @@
 
 An ML-powered email classification system that identifies phishing attempts with **96% accuracy**, trained on over **82,000 real emails**. Deployed as a Microsoft Outlook add-in for seamless, real-time threat detection directly in your inbox.
 
-![Phishing Detection Demo](<img width="803" height="883" alt="image" src="https://github.com/user-attachments/assets/29aa9f52-6f52-43a0-bc84-78dce85e4507" />
-)
+Phishing Detection Demo:
+<img width="803" height="883" alt="image" src="https://github.com/user-attachments/assets/29aa9f52-6f52-43a0-bc84-78dce85e4507" />
+
 <img width="972" height="589" alt="image" src="https://github.com/user-attachments/assets/a612171f-036f-47ed-91d9-923ecffd5ef2" />
+
 <img width="972" height="586" alt="image" src="https://github.com/user-attachments/assets/6d50449b-9f86-40c9-8943-b6e9981afe44" />
+
+<img width="714" height="375" alt="image" src="https://github.com/user-attachments/assets/fa011ade-9246-486a-8108-a9d6c6ce19b8" />
+
+<img width="972" height="572" alt="image" src="https://github.com/user-attachments/assets/d269ff5f-0062-4642-894b-0982b6298e86" />
 
 
 *Real-time phishing detection integrated into Microsoft Outlook*
