@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Outlook](https://img.shields.io/badge/Outlook-Add--in-0078D4.svg)](https://docs.microsoft.com/en-us/office/dev/add-ins/)
 
-An ML-powered email classification system that identifies phishing attempts with **96% accuracy**, trained on over **82,000 real emails**. Deployed as a Microsoft Outlook add-in for seamless, real-time threat detection directly in your inbox.
+A ML-powered email classification system that identifies phishing attempts with **96% accuracy**, trained on over **82,000 real emails**. Deployed as a Microsoft Outlook add-in for seamless, real-time threat detection directly in your inbox.
 
 Phishing Detection Demo:
 <img width="803" height="883" alt="image" src="https://github.com/user-attachments/assets/29aa9f52-6f52-43a0-bc84-78dce85e4507" />
