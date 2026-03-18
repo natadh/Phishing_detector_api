@@ -796,12 +796,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📧 Contact
 
 **Natalie Adhiambo Odhiambo**  
-Applied Computer Technology Student  
+Applied Computer Technology Graduate 
 United States International University - Africa
 
 - GitHub: [@natadh](https://github.com/natadh)
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- Email: alieadhiambo@gmail.com
+- LinkedIn: [Your LinkedIn](www.linkedin.com/in/natalie-adhiambo-290789334)
 
 ---
 
@@ -833,4 +833,4 @@ This project was developed as part of the **APT4900: Final Project** course for 
 
 ---
 
-## ⭐ If you found this project helpful, please consider giving it a star!
+### ⭐ If you found this project helpful, please consider giving it a star :)!
